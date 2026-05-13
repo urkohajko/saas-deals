@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Deals</title>
+    <link rel="stylesheet" href="/static/styles.css?v={{ version }}">
+</head>
+<body>
+
+<header>
+    <h1>Curated SaaS deals for operators</h1>
+    <p>Premium SaaS deals, sin ruido. Selección mínima, foco máximo.</p>
+</header>
+
+<div class="grid">
+    {% for d in deals %}
+    <div class="card">
+        <img class="hero" src="{{ d.hero }}" alt="{{ d.name }} hero">
+        <span class="badge">{{ d.badge }}</span>
+
+        <div class="content">
+            <img class="logo" src="{{ d.logo }}" alt="{{ d.name }} logo">
+
+            <h2>{{ d.name }}</h2>
+            <p class="category">{{ d.category }}</p>
+            <p class="desc">{{ d.description }}</p>
+            <p class="tagline">{{ d.tagline }}</p>
+
+            <div class="pricing">
+                <span class="price">{{ d.price }}</span>
+                <span class="old">{{ d.old_price }}</span>
+                <span class="discount">{{ d.discount }}</span>
+            </div>
+
+            <a class="button" href="https://google.com?q={{ d.slug }}" target="_blank">
+                ⚡ Get this deal
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
