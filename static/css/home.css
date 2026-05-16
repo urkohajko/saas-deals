@@ -1,0 +1,212 @@
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f6fa;
+    color: #111827;
+}
+
+.header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.subtitle {
+    margin-top: 10px;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 10px 20px 0;
+}
+
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter {
+    padding: 8px 16px;
+    background: white;
+    border-radius: 20px;
+    text-decoration: none;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.filter.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+.sort {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.sort a {
+    text-decoration: none;
+    color: #374151;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.sort a.active {
+    background: #2563eb;
+    color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    padding: 30px 40px 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card-img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.badge {
+    background: #2563eb;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+}
+
+.card-title {
+    margin: 12px 0 6px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.card-desc {
+    color: #6b7280;
+    font-size: 14px;
+    height: 40px;
+    overflow: hidden;
+}
+
+.card-meta {
+    margin-top: 8px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 12px;
+}
+
+.discount {
+    background: #f97316;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.coupon {
+    background: #e5e7eb;
+    color: #374151;
+    padding: 2px 8px;
+    border-radius: 999px;
+}
+
+.card-footer {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.btn {
+    background: #2563eb;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.like-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 18px;
+    line-height: 1;
+    padding: 4px 6px;
+    color: #9ca3af;
+}
+
+.like-btn.liked {
+    color: #ef4444;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    padding-bottom: 30px;
+}
+
+.pagination a {
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #374151;
+    border: 1px solid #e5e7eb;
+    font-size: 14px;
+}
+
+.pagination a.active {
+    background: #2563eb;
+    color: white;
+    border-color: #2563eb;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        padding: 20px;
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,71 @@
+{% extends "admin/layout.html" %}
+
+{% block content %}
+<h1>Dashboard</h1>
+
+<div class="stats-grid">
+    <div class="stat-card">
+        <h3>Total Deals</h3>
+        <p class="stat-number">{{ total_deals }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Precio medio</h3>
+        <p class="stat-number">${{ '%.2f'|format(avg_price) }}</p>
+    </div>
+
+    <div class="stat-card">
+        <h3>Deals con gran descuento</h3>
+        <p class="stat-number">{{ high_discount|length }}</p>
+    </div>
+</div>
+
+<h2>Últimos deals</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Descuento</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for deal in last_deals %}
+        <tr>
+            <td>{{ deal.title }}</td>
+            <td>{{ deal.category }}</td>
+            <td>${{ '%.2f'|format(deal.price) }}</td>
+            <td>
+                {% if deal.discount_percent %}
+                    -{{ deal.discount_percent }}%
+                {% else %}
+                    —
+                {% endif %}
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+<h2>Deals con alto descuento</h2>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Título</th>
+            <th>Descuento</th>
+            <th>Cupón</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for deal in high_discount %}
+        <tr>
+            <td>{{ deal.title }}</td>
+            <td>-{{ deal.discount_percent }}%</td>
+            <td>{{ deal.coupon_code or '—' }}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

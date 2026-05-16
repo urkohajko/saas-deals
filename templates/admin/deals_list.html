@@ -1,0 +1,41 @@
+{% extends "admin/layout.html" %}
+
+{% block content %}
+<h1>Deals</h1>
+
+<a href="/admin/deals/new" class="btn primary">Nuevo Deal</a>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Título</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Descuento</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+    {% for deal in deals %}
+        <tr>
+            <td>{{ deal.id }}</td>
+            <td>{{ deal.title }}</td>
+            <td>{{ deal.category }}</td>
+            <td>${{ '%.2f'|format(deal.price) }}</td>
+            <td>
+                {% if deal.discount_percent %}
+                    -{{ deal.discount_percent }}%
+                {% else %}
+                    —
+                {% endif %}
+            </td>
+            <td>
+                <a href="/admin/deals/edit/{{ deal.id }}">Editar</a> |
+                <a href="/admin/deals/delete/{{ deal.id }}">Eliminar</a>
+            </td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

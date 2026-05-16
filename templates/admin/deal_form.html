@@ -1,0 +1,40 @@
+{% extends "admin/layout.html" %}
+
+{% block content %}
+<h1>{% if deal %}Editar Deal{% else %}Nuevo Deal{% endif %}</h1>
+
+<form method="post" enctype="multipart/form-data" class="form">
+
+    <label>Título</label>
+    <input type="text" name="title" value="{{ deal.title if deal else '' }}">
+
+    <label>Descripción</label>
+    <textarea name="description">{{ deal.description if deal else '' }}</textarea>
+
+    <label>Precio</label>
+    <input type="number" step="0.01" name="price" value="{{ deal.price if deal else '' }}">
+
+    <label>URL</label>
+    <input type="text" name="url" value="{{ deal.url if deal else '' }}">
+
+    <label>Categoría</label>
+    <select name="category">
+        {% for cat in categories %}
+            <option value="{{ cat }}" {% if deal and deal.category == cat %}selected{% endif %}>
+                {{ cat }}
+            </option>
+        {% endfor %}
+    </select>
+
+    <label>Descuento (%)</label>
+    <input type="number" name="discount_percent" value="{{ deal.discount_percent if deal and deal.discount_percent else '' }}">
+
+    <label>Cupón</label>
+    <input type="text" name="coupon_code" value="{{ deal.coupon_code if deal and deal.coupon_code else '' }}">
+
+    <label>Imagen</label>
+    <input type="file" name="image">
+
+    <button class="btn primary" type="submit">Guardar</button>
+</form>
+{% endblock %}

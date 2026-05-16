@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Deals – Ofertas Premium</title>
+    <link rel="stylesheet" href="/static/css/home.css">
+    <script defer src="/static/js/main.js"></script>
+</head>
+<body>
+
+<header class="header">
+    <h1>SaaS Deals</h1>
+    <p class="subtitle">Las mejores ofertas de software en un solo lugar</p>
+</header>
+
+<section class="controls">
+    <nav class="filters">
+        <a href="/" class="filter {% if not category %}active{% endif %}">Todos</a>
+        {% for cat in categories %}
+            <a href="/?category={{ cat }}" class="filter {% if category == cat %}active{% endif %}">
+                {{ cat }}
+            </a>
+        {% endfor %}
+    </nav>
+
+    <div class="sort">
+        <span>Ordenar por:</span>
+        <a href="/?sort=newest{% if category %}&category={{ category }}{% endif %}" class="{% if sort == 'newest' or not sort %}active{% endif %}">Nuevos</a>
+        <a href="/?sort=popular{% if category %}&category={{ category }}{% endif %}" class="{% if sort == 'popular' %}active{% endif %}">Populares</a>
+        <a href="/?sort=price_asc{% if category %}&category={{ category }}{% endif %}" class="{% if sort == 'price_asc' %}active{% endif %}">Precio ↑</a>
+        <a href="/?sort=price_desc{% if category %}&category={{ category }}{% endif %}" class="{% if sort == 'price_desc' %}active{% endif %}">Precio ↓</a>
+    </div>
+</section>
+
+<main class="grid">
+    {% for deal in deals %}
+    <div class="card" data-deal-id="{{ deal.id }}">
+        {% if deal.image_url %}
+        <img src="{{ deal.image_url }}" class="card-img">
+        {% endif %}
+
+        <div class="card-body">
+            <span class="badge">{{ deal.category }}</span>
+
+            <h2 class="card-title">{{ deal.title }}</h2>
+            <p class="card-desc">{{ deal.description }}</p>
+
+            <div class="card-meta">
+                {% if deal.discount_percent %}
+                    <span class="discount">-{{ deal.discount_percent }}%</span>
+                    {% if deal.coupon_code %}
+                        <span class="coupon">Cupón: {{ deal.coupon_code }}</span>
+                    {% endif %}
+                {% endif %}
+            </div>
+
+            <div class="card-footer">
+                <span class="price">${{ '%.2f'|format(deal.price) }}</span>
+                <a href="{{ deal.url }}" class="btn" target="_blank">Ver Deal</a>
+                <button class="like-btn" data-id="{{ deal.id }}">❤</button>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</main>
+
+{% set total_pages = (total // per_page) + (1 if total % per_page > 0 else 0) %}
+{% if total_pages > 1 %}
+<nav class="pagination">
+    {% for p in range(1, total_pages + 1) %}
+        <a href="/?page={{ p }}{% if category %}&category={{ category }}{% endif %}{% if sort %}&sort={{ sort }}{% endif %}"
+           class="{% if p == page %}active{% endif %}">
+            {{ p }}
+        </a>
+    {% endfor %}
+</nav>
+{% endif %}
+
+</body>
+</html>

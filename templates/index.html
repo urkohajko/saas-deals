@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>SaaS Deals</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<h1>SaaS Deals</h1>
+
+<div class="deals-container">
+    {% for deal in deals %}
+    <div class="deal-card" data-category="{{ deal.category }}">
+
+        <div class="badge badge-hot">🔥 Trending</div>
+
+        <a href="/deal/{{ deal.id }}/{{ deal.title | lower | replace(' ', '-') }}">
+            <img src="{{ deal.image_url }}" class="deal-image">
+        </a>
+
+        <h2>{{ deal.title }}</h2>
+        <p>{{ deal.description }}</p>
+
+        <div class="deal-info">
+            <span class="price">${{ deal.price }}</span>
+            <span class="discount">-{{ deal.discount_percent }}%</span>
+        </div>
+
+        {% if deal.coupon_code %}
+        <p class="coupon">Cupón: {{ deal.coupon_code }}</p>
+        {% endif %}
+
+        <a href="/deal/{{ deal.id }}/{{ deal.title | lower | replace(' ', '-') }}" class="deal-button">
+            Ver Oferta
+        </a>
+
+        <p class="category">{{ deal.category }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

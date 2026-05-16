@@ -1,0 +1,95 @@
+{
+    "notion": {
+        "slug": "notion",
+        "url": "https://notion.so",
+        "timestamp": "2026-05-15T12:19:14.736063",
+        "screenshot_path": "C:\\saas-deals-clean\\screenshots\\notion_1778847554.png",
+        "problem": "This tool solves a real problem in modern workflows.",
+        "solution": "It helps you automate your operations with less effort.",
+        "key_points": [
+            "AI-powered features that reduce manual work.",
+            "Improves team alignment and execution."
+        ]
+    },
+    "clickup": {
+        "slug": "clickup",
+        "url": "https://clickup.com",
+        "timestamp": "2026-05-15T11:56:27.745724",
+        "screenshot_path": "C:\\saas-deals-clean\\screenshots\\clickup_1778846187.png",
+        "problem": "This tool solves a real manual in modern workflows.",
+        "solution": "It helps you automate your operations with less effort.",
+        "key_points": [
+            "AI-powered features that reduce manual work.",
+            "Improves team alignment and execution.",
+            "Clear dashboards that show what matters.",
+            "Automation that removes repetitive tasks.",
+            "Integrates smoothly with your existing tools."
+        ]
+    },
+    "zapier": {
+        "slug": "zapier",
+        "url": "https://zapier.com",
+        "timestamp": "2026-05-15T12:20:40.577635",
+        "screenshot_path": "C:\\saas-deals-clean\\screenshots\\zapier_1778847640.png",
+        "problem": "This tool solves a real problem in modern workflows.",
+        "solution": "It helps you automate your operations with less effort.",
+        "key_points": [
+            "AI-powered features that reduce manual work.",
+            "Improves team alignment and execution.",
+            "Automation that removes repetitive tasks.",
+            "Integrates smoothly with your existing tools."
+        ]
+    },
+    "hubspot": {
+        "slug": "hubspot",
+        "url": "https://hubspot.com",
+        "timestamp": "2026-05-15T11:48:03.330484",
+        "screenshot_path": "C:\\saas-deals-clean\\screenshots\\hubspot_1778845682.png",
+        "problem": "This tool solves a real slow in modern workflows.",
+        "solution": "It helps you automate your operations with less effort.",
+        "key_points": [
+            "AI-powered features that reduce manual work.",
+            "Improves team alignment and execution.",
+            "Integrates smoothly with your existing tools."
+        ]
+    },
+    "make": {
+        "slug": "make",
+        "url": "https://make.com",
+        "timestamp": "2026-05-15T11:40:56.370704",
+        "screenshot_path": "C:\\saas-deals-clean\\screenshots\\make_1778845256.png",
+        "problem": "This tool removes friction and simplifies your workflow.",
+        "solution": "It gives you a cleaner, more reliable way to operate.",
+        "key_points": [
+            "Removes manual busywork.",
+            "Gives you clearer feedback loops.",
+            "Fits into your existing workflow."
+        ]
+    },
+    "tability": {
+        "slug": "tability",
+        "url": "https://tability.io",
+        "timestamp": "2026-05-15T11:35:18.373487",
+        "screenshot_path": "C:\\saas-deals-clean\\screenshots\\tability_1778844918.png",
+        "problem": "This tool removes friction and simplifies your workflow.",
+        "solution": "It gives you a cleaner, more reliable way to operate.",
+        "key_points": [
+            "Removes manual busywork.",
+            "Gives you clearer feedback loops.",
+            "Fits into your existing workflow."
+        ]
+    },
+    "ahrefs": {
+        "slug": "ahrefs",
+        "url": "https://ahrefs.com",
+        "timestamp": "2026-05-15T12:19:27.709491",
+        "screenshot_path": "C:\\saas-deals-clean\\screenshots\\ahrefs_1778847567.png",
+        "problem": "This tool solves a real manual in modern workflows.",
+        "solution": "It helps you automate your operations with less effort.",
+        "key_points": [
+            "AI-powered features that reduce manual work.",
+            "Improves team alignment and execution.",
+            "Clear dashboards that show what matters."
+        ]
+    }
+}

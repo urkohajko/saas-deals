@@ -1,0 +1,7 @@
+.env
+*.db
+__pycache__/
+screenshots/
+logs/
+chromedriver.exe
+*.exe

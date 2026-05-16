@@ -1,0 +1,122 @@
+[
+    {
+        "slug": "tability",
+        "name": "Tability",
+        "category": "productivity / goals",
+        "website": "https://tability.io",
+        "benefit": "Helps teams stay aligned without meetings.",
+        "ideal_for": "Founders, operators, async teams.",
+        "discount": "20% off for SaaS Deals users.",
+        "deal_url": "https://tability.io"
+    },
+    {
+        "slug": "typedream",
+        "name": "Typedream",
+        "category": "website builder",
+        "website": "https://typedream.com",
+        "benefit": "Build beautiful sites without touching code.",
+        "ideal_for": "Creators, founders, indie hackers.",
+        "discount": "Exclusive 30% off.",
+        "deal_url": "https://typedream.com"
+    },
+    {
+        "slug": "framer",
+        "name": "Framer",
+        "category": "design / website",
+        "website": "https://framer.com",
+        "benefit": "The fastest way to build stunning websites.",
+        "ideal_for": "Designers, marketers, founders.",
+        "discount": "Special SaaS Deals bonus templates.",
+        "deal_url": "https://framer.com"
+    },
+    {
+        "slug": "notion",
+        "name": "Notion",
+        "category": "productivity / docs",
+        "website": "https://notion.so",
+        "benefit": "Your entire workspace in one place.",
+        "ideal_for": "Teams, operators, creators.",
+        "discount": "Free credits for new users.",
+        "deal_url": "https://notion.so"
+    },
+    {
+        "slug": "zapier",
+        "name": "Zapier",
+        "category": "automation",
+        "website": "https://zapier.com",
+        "benefit": "Automate workflows without code.",
+        "ideal_for": "Operators, marketers, founders.",
+        "discount": "Starter plan perks.",
+        "deal_url": "https://zapier.com"
+    },
+    {
+        "slug": "make",
+        "name": "Make (Integromat)",
+        "category": "automation",
+        "website": "https://make.com",
+        "benefit": "Visual automation for complex workflows.",
+        "ideal_for": "Technical operators, automation-heavy teams.",
+        "discount": "Extra operations for SaaS Deals users.",
+        "deal_url": "https://make.com"
+    },
+    {
+        "slug": "loom",
+        "name": "Loom",
+        "category": "communication",
+        "website": "https://loom.com",
+        "benefit": "Async video messaging for teams.",
+        "ideal_for": "Remote teams, founders, support.",
+        "discount": "Free trial extensions.",
+        "deal_url": "https://loom.com"
+    },
+    {
+        "slug": "figma",
+        "name": "Figma",
+        "category": "design",
+        "website": "https://figma.com",
+        "benefit": "Collaborative design for modern teams.",
+        "ideal_for": "Designers, product teams, startups.",
+        "discount": "Community templates included.",
+        "deal_url": "https://figma.com"
+    },
+    {
+        "slug": "ahrefs",
+        "name": "Ahrefs",
+        "category": "seo / marketing",
+        "website": "https://ahrefs.com",
+        "benefit": "The most complete SEO toolkit.",
+        "ideal_for": "Marketers, founders, content teams.",
+        "discount": "Trial perks.",
+        "deal_url": "https://ahrefs.com"
+    },
+    {
+        "slug": "surferseo",
+        "name": "SurferSEO",
+        "category": "seo / content",
+        "website": "https://surferseo.com",
+        "benefit": "Rank faster with data-backed content.",
+        "ideal_for": "Writers, marketers, founders.",
+        "discount": "Special SaaS Deals templates.",
+        "deal_url": "https://surferseo.com"
+    },
+    {
+        "slug": "hubspot",
+        "name": "HubSpot",
+        "category": "crm / marketing",
+        "website": "https://hubspot.com",
+        "benefit": "All-in-one CRM for growing teams.",
+        "ideal_for": "Sales, marketing, founders.",
+        "discount": "Startup credits available.",
+        "deal_url": "https://hubspot.com"
+    },
+    {
+        "slug": "clickup",
+        "name": "ClickUp",
+        "category": "productivity / project management",
+        "website": "https://clickup.com",
+        "benefit": "One app to replace them all.",
+        "ideal_for": "Teams, operators, agencies.",
+        "discount": "Free upgrades for new users.",
+        "deal_url": "https://clickup.com"
+    }
+]

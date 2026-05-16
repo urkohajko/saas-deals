@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+    <title>{{ meta_title }}</title>
+    <meta name="description" content="{{ meta_description }}">
+    <link rel="canonical" href="{{ canonical_url }}">
+
+    <meta property="og:title" content="{{ meta_title }}">
+    <meta property="og:description" content="{{ meta_description }}">
+    <meta property="og:image" content="{{ deal.image_url }}">
+    <meta property="og:type" content="website">
+
+    <script type="application/ld+json">
+        {{ schema_json | safe }}
+    </script>
+
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<a href="/" class="back-btn">⬅ Volver</a>
+
+<div class="deal-page">
+    <img src="{{ deal.image_url }}" class="deal-page-image" loading="lazy">
+
+    <h1>{{ deal.title }}</h1>
+    <p class="deal-desc">{{ deal.description }}</p>
+
+    <div class="deal-info">
+        <span class="price">${{ deal.price }}</span>
+        <span class="discount">-{{ deal.discount_percent }}%</span>
+    </div>
+
+    {% if deal.coupon_code %}
+    <p class="coupon">Cupón: {{ deal.coupon_code }}</p>
+    {% endif %}
+
+    <a href="/click/{{ deal.id }}" class="deal-button">Obtener Oferta</a>
+
+    <p class="category">{{ deal.category }}</p>
+</div>
+
+<h2 class="related-title">También te puede interesar</h2>
+
+<div class="related-container">
+    {% for o in others[:6] %}
+    <a href="/deal/{{ o.id }}/{{ o.title | lower | replace(' ', '-') }}" class="related-card">
+        <img src="{{ o.image_url }}" class="related-img">
+        <p>{{ o.title }}</p>
+    </a>
+    {% endfor %}
+</div>
+
+</body>
+</html>
